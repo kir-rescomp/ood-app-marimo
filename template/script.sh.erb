@@ -1,68 +1,18 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-set -e
-
-
-<%
-
-def true?(obj)
-  obj.to_s.downcase == "true"
-end
-
-path = context.path.nil? or context.path.empty? ? path = "~/.marimo-notebooks" : path = context.path
-
-venv = context.venv
-
-venv_plus_module = true? context.venv_plus_module
-
-if File.directory? path or not File.exist? path
-  dir = path
-else
-  dir = File.dirname(path)
-end
-
-%>
-
-
+# Load required modules (adjust for your cluster)
 module purge
+module load uv # If needed
 
-module load uv
+# Create marimo notebook directory if it doesn't exist
+mkdir -p "<%= marimo_startup_dir %>"
 
-
-<% if (!venv.empty? and venv_plus_module) or (venv.empty?) %>
-module load <%= context.pythonmodule %>
-<% end %>
-
-
-# Output debug info
-module list
-
-
-mkdir -p <%= dir %>
-
-
-token=$(cat token)
-rm token
-
-cd <%= dir %>
-
-rm -rf .marimo-dependencies
-
-<% if !venv.empty? %>
-  source <%= venv %>
-  CONDA_PREFIX='' uv pip install marimo
-  <% command = "" %>
-<% else %>
-    <% command = "uvx --python $(which python) " %>
-<% end %>
-
-python3 -m ensurepip
-python3 -m pip download --no-deps --only-binary=:all: -d ./.marimo-dependencies/ "typing-extensions>=4.12.2"
-whl=$(ls -d $PWD/.marimo-dependencies/*.whl)
-
-
-# TODO use a token
-PYTHONPATH=$whl:$PYTHONPATH <%= command %> marimo edit \
-  --proxy ondemand00.bmrc.ox.ac.uk:443 --token-password $token \
-  --headless --host 0.0.0.0 --port ${port} \
-  --base-url /node/$(hostname)/${port} <%= path %>
+# Launch marimo
+uvx --python $(which python3) marimo edit \
+  --proxy <%= ENV['OOD_PORTAL_HOST'] %>:443 \
+  --no-token \
+  --headless \
+  --host 0.0.0.0 \
+  --port ${port} \
+  --base-url /node/$(hostname)/${port} \
+  "<%= marimo_startup_dir %>"
