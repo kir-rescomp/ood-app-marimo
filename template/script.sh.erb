@@ -1,18 +1,24 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Load required modules (adjust for your cluster)
+echo "Starting marimo server..."
+
+# Clean the environment
 module purge
-module load uv # If needed
+module load uv
 
-# Create marimo notebook directory if it doesn't exist
-mkdir -p "<%= marimo_startup_dir %>"
+# Load any required modules (adjust for your cluster)
+# module load python/3.11
 
-# Launch marimo
+# Change to marimo directory
+cd "${MARIMO_DIR}"
+
+# Launch marimo server
+set -x
 uvx --python $(which python3) marimo edit \
   --proxy <%= ENV['OOD_PORTAL_HOST'] %>:443 \
   --no-token \
   --headless \
   --host 0.0.0.0 \
   --port ${port} \
-  --base-url /node/$(hostname)/${port} \
-  "<%= marimo_startup_dir %>"
+  --base-url /node/${host}/${port} \
+  "${MARIMO_DIR}"
