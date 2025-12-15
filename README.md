@@ -1,4 +1,4 @@
-# `marimo` OOD app for KIR/BMRC
+<h1 align="center">`marimo` OOD app for KIR/BMRC</h1>
 
 <p align="center">
   <img src="./icon.png" alt="marimo-logo" width="300"/>
