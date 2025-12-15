@@ -7,7 +7,7 @@
 port=$(find_port ${host})
 
 # Set marimo notebook directory from form
-export MARIMO_DIR="<%= context.marimo_startup_dir %>"
+export MARIMO_DIR="$(eval echo <%= context.marimo_startup_dir %>)"
 
 # Create directory if it doesn't exist
 mkdir -p "${MARIMO_DIR}"
