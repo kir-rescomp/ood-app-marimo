@@ -1,0 +1,11 @@
+c.KernelSpecManager.ensure_native_kernel = False
+c.ServerApp.ip = '*'
+c.ServerApp.port = 23186
+c.ServerApp.base_url = '/node/compa017.hpc.in.bmrc.ox.ac.uk/23186/'
+c.ServerApp.port_retries = 0
+c.ServerApp.PasswordIdentityProvider.hashed_password = u'sha1:aSm47OD8rDtaPaae:e8cf9e51fb0409fd9fdcce6904c802233c3e1c8d'
+c.ServerApp.password_required = True
+c.ServerApp.allow_origin = '*'
+c.ServerApp.root_dir = '/gpfs3/well/sansom/users/mat611/devel/venv/reporting'
+c.ServerApp.disable_check_xsrf = True
+c.NotebookApp.open_browser = False

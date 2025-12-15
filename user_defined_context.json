@@ -1,0 +1,9 @@
+{
+  "auto_queues": "short",
+  "jupyter_setup_script": "~/jupyter.sh",
+  "jupyter_mode": "1",
+  "jupyter_startup_dir": "/users/sansom/mat611/devel/venv/reporting",
+  "cores": "2",
+  "ram": "6",
+  "bc_num_hours": "4"
+}

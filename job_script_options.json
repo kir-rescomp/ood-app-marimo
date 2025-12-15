@@ -1,0 +1,17 @@
+{
+  "job_name": "sys/dashboard/sys/jupyter",
+  "workdir": "/users/sansom/mat611/ondemand/data/sys/dashboard/batch_connect/sys/jupyter/output/eea7ed29-5c4d-44bd-bb0e-279d682b6fb8",
+  "output_path": "/users/sansom/mat611/ondemand/data/sys/dashboard/batch_connect/sys/jupyter/output/eea7ed29-5c4d-44bd-bb0e-279d682b6fb8/output.log",
+  "shell_path": "/bin/bash",
+  "queue_name": "short",
+  "wall_time": 14400,
+  "email_on_started": false,
+  "native": [
+    "--ntasks",
+    "1",
+    "--mem",
+    "6G",
+    "--cpus-per-task",
+    "2"
+  ]
+}

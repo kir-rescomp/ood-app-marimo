@@ -1,0 +1,48 @@
+Script starting...
+Waiting for Jupyter server to open port 23186...
+Starting main script...
++ jupyter lab --config=/users/sansom/mat611/ondemand/data/sys/dashboard/batch_connect/sys/jupyter/output/eea7ed29-5c4d-44bd-bb0e-279d682b6fb8/config.py
+[W 2025-10-02 08:53:42.118 ServerApp] ServerApp.password_required config is deprecated in 2.0. Use PasswordIdentityProvider.password_required.
+[I 2025-10-02 08:53:42.436 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-10-02 08:53:42.441 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-10-02 08:53:42.446 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-10-02 08:53:42.450 ServerApp] notebook | extension was successfully linked.
+[I 2025-10-02 08:53:45.221 ServerApp] notebook_shim | extension was successfully linked.
+[W 2025-10-02 08:53:45.348 ServerApp] WARNING: The Jupyter server is listening on all IP addresses and not using encryption. This is not recommended.
+[I 2025-10-02 08:53:45.349 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-10-02 08:53:45.351 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-10-02 08:53:45.352 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-10-02 08:53:45.358 LabApp] JupyterLab extension loaded from /gpfs3/well/sansom/users/mat611/devel/venv/Python-3.10.8-GCCcore-12.2.0/skylake/lib/python3.10/site-packages/jupyterlab
+[I 2025-10-02 08:53:45.358 LabApp] JupyterLab application directory is /gpfs3/well/sansom/users/mat611/devel/venv/Python-3.10.8-GCCcore-12.2.0/skylake/share/jupyter/lab
+[I 2025-10-02 08:53:45.360 LabApp] Extension Manager is 'pypi'.
+[I 2025-10-02 08:53:45.381 LabApp] Extensions will be fetched using proxy, proxy host and port: ('63125967', 'anon@springbok.hpc.in.bmrc.ox.ac.uk:3128')
+[I 2025-10-02 08:53:45.385 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-10-02 08:53:45.389 ServerApp] notebook | extension was successfully loaded.
+[I 2025-10-02 08:53:45.390 ServerApp] Serving notebooks from local directory: /gpfs3/well/sansom/users/mat611/devel/venv/reporting
+[I 2025-10-02 08:53:45.390 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2025-10-02 08:53:45.390 ServerApp] http://localhost:23186/node/compa017.hpc.in.bmrc.ox.ac.uk/23186/lab
+[I 2025-10-02 08:53:45.390 ServerApp]     http://127.0.0.1:23186/node/compa017.hpc.in.bmrc.ox.ac.uk/23186/lab
+[I 2025-10-02 08:53:45.390 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2025-10-02 08:53:45.396 ServerApp] No web browser found: Error('could not locate runnable browser').
+[I 2025-10-02 08:53:45.432 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+Discovered Jupyter server listening on port 23186!
+Generating connection YAML file...
+[I 2025-10-02 08:53:56.304 ServerApp] User c8a37facc9f943afaa0256969f819704 logged in.
+[I 2025-10-02 08:53:56.305 ServerApp] 302 POST /node/compa017.hpc.in.bmrc.ox.ac.uk/23186/login?next=%2Fnode%2Fcompa017.hpc.in.bmrc.ox.ac.uk%2F23186%2F (c8a37facc9f943afaa0256969f819704@10.136.6.101) 1.58ms
+[I 2025-10-02 08:53:56.362 ServerApp] 302 GET /node/compa017.hpc.in.bmrc.ox.ac.uk/23186/ (@10.136.6.101) 0.40ms
+[W 2025-10-02 08:53:57.991 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2025-10-02 08:54:06.159 ServerApp] Kernel started: afeb24c2-8889-41cb-8ae1-f4ee40c7825b
+[I 2025-10-02 08:54:11.272 ServerApp] Connecting to kernel afeb24c2-8889-41cb-8ae1-f4ee40c7825b.
+[I 2025-10-02 08:54:11.274 ServerApp] Connecting to kernel afeb24c2-8889-41cb-8ae1-f4ee40c7825b.
+[I 2025-10-02 08:54:11.277 ServerApp] Connecting to kernel afeb24c2-8889-41cb-8ae1-f4ee40c7825b.
+[W 2025-10-02 08:54:11.278 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[I 2025-10-02 08:56:05.977 ServerApp] Saving file at /storage_reporting.ipynb
+[I 2025-10-02 08:58:06.168 ServerApp] Saving file at /storage_reporting.ipynb
+[I 2025-10-02 09:10:06.694 ServerApp] Saving file at /storage_reporting.ipynb
+[I 2025-10-02 09:12:06.952 ServerApp] Saving file at /storage_reporting.ipynb
+[I 2025-10-02 09:14:07.310 ServerApp] Saving file at /storage_reporting.ipynb
+[I 2025-10-02 09:37:34.624 ServerApp] Saving file at /storage_reporting.ipynb
+[W 2025-10-02 10:43:41.277 ServerApp] WebSocket ping timeout after 119966 ms.
+[I 2025-10-02 10:43:46.279 ServerApp] Starting buffering for afeb24c2-8889-41cb-8ae1-f4ee40c7825b:a72c9ce7-920d-4608-93d0-06e019f4e385
+slurmstepd: error: *** JOB 63125967 ON compa017 CANCELLED AT 2025-10-02T12:53:45 DUE TO TIME LIMIT ***
