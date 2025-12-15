@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Wait for marimo to start listening on the port
+echo "Waiting for marimo to open port ${port}..."
+echo "TIMING - Starting wait at: $(date)"
+
+if wait_until_port_used "${host}:${port}" 300; then
+  echo "Discovered marimo listening on port ${port}!"
+  echo "TIMING - Wait completed at: $(date)"
+else
+  echo "Timed out waiting for marimo to open port ${port}!"
+  echo "TIMING - Timeout at: $(date)"
+  echo "Check output.log for errors"
+  clean_up 1
+fi
+
+# Give it a moment to fully initialize
+sleep 2
+
+echo "Marimo is ready to connect!"
