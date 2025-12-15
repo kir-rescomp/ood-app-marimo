@@ -1,0 +1,7 @@
+---
+name: Marimo Notebook
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: |
+  This app will launch a Marimo notebook as an interactive batch job.
